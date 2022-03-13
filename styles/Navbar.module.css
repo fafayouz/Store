@@ -1,0 +1,131 @@
+.container {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  padding-left: 140px;
+  padding-right: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+.container b {
+  color: #f9f871;
+}
+.container h1 {
+  color: white;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+.listItem a {
+  text-decoration: none;
+  color: white;
+}
+.listItem a:hover {
+  color: #f9f871;
+  transition: all 0.3s;
+}
+.burger {
+  display: none;
+}
+.menu {
+   display: none;
+}
+.cart {
+    width: 50px;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.cartMobile {
+  display: none;
+}
+/* color 
+#FEBC66 Jaune
+#1C459D Blue
+*/
+
+/* For Mobile */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list {
+    display: none;
+  }
+  .burger {
+    width: 30px;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .burger div {
+      width: 100%;
+      height: 3px;
+      border-radius: 0.2rem;
+      background-color: white;
+  }
+  .menu {
+    position: fixed;
+    top: 67px;
+    display: flex;
+    height: 70vh;
+    width: 70vw;
+    background-color: black;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    z-index: 999;
+  }
+  .menuList {
+      list-style: none;
+      width: 90%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid white;
+  }
+  .menuList a {
+      text-decoration: none;
+      color: white;
+  }
+  .cart {
+    display: none;
+  }
+
+  .cartMobile {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+}
+
+/* For Tabllet */
