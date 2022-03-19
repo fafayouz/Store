@@ -2,7 +2,9 @@
     display: flex;
     width: 300vw;
     height: 80vh;
-    cursor: pointer;    
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 60px;
 }
 
 .ImageContainer {
@@ -23,7 +25,7 @@
     }
 }
 .title {
-    position: fixed;
+    position: absolute;
     width: 20%;
     right: calc(79.9% - 140px);
     color: white;
@@ -35,7 +37,7 @@
     width: 15%;
     height: 3.5rem;
     background-color: black;
-    position: fixed;
+    position: absolute;
     right: calc(84.9% - 140px);
     bottom: 40%;
     opacity: 1;
@@ -55,7 +57,7 @@
 .radio {
     width: 15%;
     height: 3.5rem;
-    position: fixed;
+    position: absolute;
     right: calc(84.9% - 140px);
     bottom: 27%;
     display: flex;
@@ -78,14 +80,15 @@
 
 
 @media screen and  (max-width: 600px) {
+   
     .Container {
         height: 60vh;
+        overflow: hidden;
     }
     .btn {
         width: 50%;
         right: 25%;
         opacity: 1;
-        position: fixed;
         right: calc(100% - 50% - 30px );
 
     }

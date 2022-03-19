@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import NewArrivage from '../components/NewArrivage/NewArrivage'
+import NewsLetter from '../components/NewsLetter/NewsLetter'
 import Slider from '../components/Slider/Slider'
+import Sport from '../components/Sport/Sport'
+import TopFooter from '../components/TopFooter/TopFooter'
 
 export default function Home() {
   return (
@@ -11,6 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <Slider/>
+    <NewArrivage/>
+    <Sport/>
+    <NewsLetter/>
+    <TopFooter/>
     </>
   )
 }

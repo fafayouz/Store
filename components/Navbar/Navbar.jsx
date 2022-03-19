@@ -5,6 +5,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
+import Cart from "../Cart/Cart";
+import { useSelector } from "react-redux";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -12,14 +14,15 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
       top: 5,
       border: `2px solid black`,
       padding: '0 3px',
-      background: "#f9f871",
-      color:"black",
+      background: "#AD0618",
+      color:"white",
     },
   }));
   
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
+  const [cartOpen , setCartOpen] = useState(false);
+  const cartIndex = useSelector(state => state.cart.cartItems.length)
   return (
     <>
       <div className={styles.container}>
@@ -31,7 +34,7 @@ const Navbar = () => {
           <div></div>
           <div></div>
         </div>
-        <ul className={styles.list}>
+        <ul onClick={() => {setCartOpen(false)}}className={styles.list}>
           <li className={styles.listItem}>
             <Link href="/">Accueil</Link>
           </li>
@@ -69,17 +72,23 @@ const Navbar = () => {
             <Link href="/">Contact</Link>
           </li>
         </ul>
-        <div className={styles.cart}>
+        <div onClick={() => {setCartOpen(!cartOpen)}} className={styles.cart}>
         <IconButton aria-label="cart">
-          <StyledBadge badgeContent={4} color="secondary">
+          <StyledBadge badgeContent={cartIndex} color="secondary">
             <ShoppingCartIcon style={{fill: "white"}} fontSize="medium" />
+          </StyledBadge>
+        </IconButton>
+      </div>
+      <div onClick={() => {setCartOpen(!cartOpen)}} className={styles.cartMobile}>
+        <IconButton aria-label="cart">
+          <StyledBadge badgeContent={cartIndex} color="secondary">
+            <ShoppingCartIcon style={{fill: "black"}} fontSize="large" />
           </StyledBadge>
         </IconButton>
       </div>
         
       </div>
-      
-   
+      <Cart cartOpen={cartOpen} setCartOpen={setCartOpen}/>
     </>
   );
 };
