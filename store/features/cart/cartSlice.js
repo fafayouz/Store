@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ConfirmInformation } from "../order/orderSlice";
 
-export const slice = createSlice({
+
+const initialState = {
+  cartItems: [],
+  Total: 0,
+}
+export const CartSlice = createSlice({
   name: "cart",
-  initialState: {
-    cartItems: [],
-    Total: 0,
-  },
+  initialState: initialState,
   reducers: {
     addItemToCart: (state, action) => {
       const pseudoId = new Date().getTime();
@@ -30,9 +33,14 @@ export const slice = createSlice({
       }, 0);
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(ConfirmInformation, (state) => {
+      return initialState ;
+    });
+  }
 });
 
 
-export const { addItemToCart, removeItemFromCart } = slice.actions;
+export const { addItemToCart, removeItemFromCart } = CartSlice.actions;
 
-export default slice.reducer;
+export default CartSlice.reducer;

@@ -75,7 +75,7 @@ const Cart = ({ cartOpen, setCartOpen }) => {
               <span className={styles.shipinfo}>
                 Livraison et taxes calculées à la caisse.
               </span>
-              <div className={styles.CheckoutBtn}>
+              <div onClick={() => {setCartOpen(false)}} className={styles.CheckoutBtn}>
                 <Link href="/Checkout">Vérifier</Link>
               </div>
             </div>

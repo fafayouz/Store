@@ -7,6 +7,28 @@
     justify-content: center;
     align-items: center;
 }
+.CheckoutContainerPanier {
+    width: 100%;
+    height: 100vh;
+    background-color: #dedede;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CheckoutContainerPanier div {
+    width: 25%;
+    height: 10%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.CheckoutContainerPanier div a {
+    color: white;
+    text-decoration: none;
+}
 .btn {
     width: 80%;
     height: 5rem;
@@ -24,3 +46,4 @@
     cursor: pointer;
     margin: 0px 30px;
 }
+
