@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "../../styles/Slider.module.css";
 import FImage from "./Femme.png";
 import HImage from "./Homme.png";
-import KImage from "./kids.png";
+import KImage from "./Kids.png";
 
 const Slider = () => {
   const [index, setIndex] = useState(0);
