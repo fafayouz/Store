@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../../styles/SingleProduct.module.css";
 import Image from "next/image";
 import { Data } from "../../components/NewArrivage/Data";
+import  {Datasport}  from "../../components/Sport/Data";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../store/features/cart/cartSlice";
@@ -15,10 +16,11 @@ const DetailProduct = () => {
   const router = useRouter();
   const slug = router.query.slug;
   const dispatch = useDispatch();
+  const allData = Data.concat(Datasport)
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await Data.find((x) => x.slug == slug);
+        const res = await allData.find((x) => x.slug == slug);
         setProduct(res);
       } catch (err) {}
     };
