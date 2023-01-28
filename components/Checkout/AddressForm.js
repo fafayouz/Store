@@ -22,10 +22,10 @@ const AddressForm = () => {
 
 
   const products = useSelector((state) => state.cart.cartItems);
-  const SubTotal = useSelector((state) => state.cart.Total)
+  const SubTotal = useSelector((state) => state.cart.totalPrice)
   const Total = Number(SubTotal) + Number(Livraison)
   
-
+console.log(products);
   const handleNext = () => {
     if (!prenom || !nom || !wilaya || !adresse || !baladya || !teléphone || !adresseEmail || !Livraison) {
       return setMessage("Please select size");
@@ -109,7 +109,7 @@ const AddressForm = () => {
                     <span> Qty {product.quantity} </span>
                   </div>
                   <div className={styles.shoesPrice}>
-                    <h1> {product.totalPrice} DZD </h1>
+                    <h1> {product.price} DZD </h1>
                   </div>
                 </div>
               </div>

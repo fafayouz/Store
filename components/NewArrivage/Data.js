@@ -7,6 +7,7 @@ import newbalnce from "./newbalnce.png";
 
 export const Data = [
   {
+    id:1,
     img: airmax,
     title: "Nike Air Max 2.0",
     marque: "Nike",
@@ -17,6 +18,7 @@ export const Data = [
     slug:"Nike-Air-Max"
   },
   {
+    id:2,
     img: zoom,
     title: "Nike Air Max 1.0",
     marque: "Nike",
@@ -27,6 +29,7 @@ export const Data = [
     slug:"Nike-Air-Max-1.0"
   },
   {
+    id:3,
     img: newbalnce,
     title: "New Balance 720",
     marque: "new balance ",
@@ -37,6 +40,7 @@ export const Data = [
     slug:"New-Balance"
   },
   {
+    id:4,
     img: air,
     title: "Air Jordan Zoom",
     marque: "air jordan ",

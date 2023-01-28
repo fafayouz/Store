@@ -6,6 +6,7 @@ import Soulierfour from "./Soulier4.png"
 
 export const Datasport =  [
    {
+      id:1,
        img : Soulierone,
        title:"Nike 2.0",
        marque:"Nike",
@@ -16,6 +17,7 @@ export const Datasport =  [
     slug:"Nike-Soulier"
    },
    {
+      id:2,
        img:Souliertwo,
        title:"Nike 1.0",
        marque:"Nike",
@@ -26,6 +28,7 @@ export const Datasport =  [
     slug:"Soulier-Air-Max"
    },
    {
+      id:4,
        img:Soulierthree,
        title:"Adidas Run ",
        marque:"Adidas ",
@@ -37,6 +40,7 @@ export const Datasport =  [
        
    },
    {
+      id:3,
        img:Soulierfour,
        title:"Adidas fast",
        marque:"Adidas ",

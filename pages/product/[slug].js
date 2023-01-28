@@ -7,6 +7,7 @@ import  {Datasport}  from "../../components/Sport/Data";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../store/features/cart/cartSlice";
+import Footer from "../../components/Footer/Footer";
 
 const DetailProduct = () => {
   const [quantity, setQuantity] = useState(1);
@@ -32,7 +33,7 @@ const DetailProduct = () => {
     }
     setMessage(false);
     const price = quantity * product.price;
-    const DATA = { product, size, price, quantity };
+    const DATA = { product, size, price, quantity , slug };
     dispatch(addItemToCart(DATA));
   };
   if (product === undefined) return <h1>Loading....</h1>;
@@ -106,6 +107,7 @@ const DetailProduct = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

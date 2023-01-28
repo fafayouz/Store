@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItemFromCart } from "../../store/features/cart/cartSlice";
+import { useEffect } from "react";
 
 const Cart = ({ cartOpen, setCartOpen }) => {
   const product = useSelector((state) => state.cart.cartItems);
-  const totalprice = useSelector((state) => state.cart.Total);
+  const totalprice = useSelector((state) => state.cart.totalPrice);
   const dispatch = useDispatch()
 
 
-
+  
   return (
     <>
       <div
@@ -27,7 +28,7 @@ const Cart = ({ cartOpen, setCartOpen }) => {
             X
           </h1>
         </div>
-        {product.length === 0 ? (
+        {product?.length === 0 ? (
           <h1
             style={{
               display: "flex",
@@ -55,12 +56,12 @@ const Cart = ({ cartOpen, setCartOpen }) => {
                   <div className={styles.InfoContainer}>
                     <div className={styles.ProductInfo}>
                       <h1> {item.product.title} </h1>
-                      <h2>{item.totalPrice} DZD </h2>
+                      <h2>{item.price}  DZD </h2>
                       <span>{item.size}</span>
                     </div>
                     <div className={styles.quantityandRemove}>
                       <span>Qty {item.quantity}</span>
-                      <b onClick={() => {dispatch(removeItemFromCart({cartItemId:item.id}))} }>Retirer</b>
+                      <b onClick={() => {dispatch(removeItemFromCart(item))} }>  Retirer</b>
                     </div>
                   </div>
                 </div>

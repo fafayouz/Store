@@ -6,12 +6,11 @@ import { ConfirmInformation, EditInformation } from "../../store/features/order/
 const PaymentForm = () => {
 
   const products = useSelector((state) => state.cart.cartItems);
-  const SubTotal = useSelector((state) => Number(state.cart.Total))
+  const SubTotal = useSelector((state) => Number(state.cart.totalPrice))
   const Livraison = useSelector((state) => Number(state.order.Information[0].Livraison))
   const Information = useSelector((state) => state.order.Information)
   const dispatch = useDispatch();
   const Total = Livraison + SubTotal
-
   const HandleBack = () => {
     dispatch(EditInformation())
   }
@@ -59,7 +58,7 @@ const PaymentForm = () => {
                     <span> Qty {product.quantity} </span>
                   </div>
                   <div className={styles.shoesPrice}>
-                    <h1> {product.totalPrice} DZD </h1>
+                    <h1> {product.price} DZD </h1>
                   </div>
                 </div>
               </div>

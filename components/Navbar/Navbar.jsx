@@ -22,7 +22,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [cartOpen , setCartOpen] = useState(false);
-  const cartIndex = useSelector(state => state.cart.cartItems.length)
+  const cartIndex = useSelector(state => state.cart.cartItems?.length)
   return (
     <>
       <div className={styles.container}>

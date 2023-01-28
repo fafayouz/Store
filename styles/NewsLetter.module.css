@@ -1,50 +1,114 @@
 .Container {
-    width: 100%;
-    height: 40vh;
-    padding-left: 140px;
-    padding-right: 140px;
-    background-color: black;
-
+  width: 100%;
+  height: 40vh;
+  padding-left: 140px;
+  padding-right: 140px;
+  background-color: black;
+  transition: 0.3s ease-in;
 }
 .subcontainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 }
 .subcontainer b {
-    border-bottom: 3px solid #ad0618;
+  border-bottom: 3px solid #ad0618;
 }
 .Email {
-    width: 50%;
-    height: 25%;
-    border-radius: 5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 50%;
+  height: 25%;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
 .Email input {
-    width: 65%;
-    height: 80%;
-    border-radius: 5rem;
-    font-family: 'Poppins', sans-serif;
-    padding: 1.2rem;
-    outline: none;
-    border: 1px solid white;
-
+  width: 65%;
+  height: 80%;
+  border-radius: 5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 1.2rem;
+  outline: none;
+  border: 1px solid white;
 }
 .Email button {
-    width: 33%;
-    height: 80%;
-    border-radius: 5rem;
-    font-family: 'Poppins', sans-serif;
-    padding: 0.2rem;
-    outline: none;
-    border: 3px solid white;
-    background-color: black;
-    cursor: pointer;
-    color: #ffff;
-    font-weight: bold;
+  width: 33%;
+  height: 80%;
+  border-radius: 5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0.2rem;
+  outline: none;
+  border: 3px solid white;
+  background-color: black;
+  cursor: pointer;
+  color: #ffff;
+  font-weight: bold;
+}
+.Email button:hover{
+    background-color: white;
+    color: black;
+}
+
+.popup {
+  width: 100%;
+  height: 40vh;
+  padding-left: 140px;
+  padding-right: 140px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.popup button {
+    width: 150px;
+  height: 50px;
+  border-radius: 5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0.2rem;
+  outline: none;
+  border: 3px solid white;
+  background-color: black;
+  cursor: pointer;
+  color: #ffff;
+  font-weight: bold;
+}
+.popup button:hover {
+    background-color: white;
+    color: black;
+}
+.Email p {
+    position: absolute;
+    color: #ad0618;
+    margin-top: 100px;
+    margin-left: -300px;
+}
+@media screen and (max-width: 600px) {
+  .Container {
+    height: 20vh;
+    padding: 0px 30px 0px 30px;
+  }
+  .subcontainer {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .Email {
+    width: 100%;
+    height: 35%;
+  }
+  .popup {
+    height: 20vh;
+    padding: 0px 30px 0px 30px;
+    text-align: center;
+  }
+  .popup button {
+    width: 60%;
+  height: 50px;
+
+}
 }

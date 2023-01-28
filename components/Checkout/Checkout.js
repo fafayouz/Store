@@ -4,11 +4,13 @@ import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import Review from "./Review";
 
 const Checkout = () => {
   const activeStep = useSelector((state) => state.order.step);
   const Cart = useSelector((state) => state.cart.cartItems);
 
+  
   return (
     <>
       {Cart.length === 0 ? (
